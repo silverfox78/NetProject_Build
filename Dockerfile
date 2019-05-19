@@ -1,5 +1,7 @@
 # escape=`
+FROM --platform=windows 
 FROM mcr.microsoft.com/dotnet/framework/sdk:4.8
+ADD quotes-windows/amd64:10.0.16299.64 /
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
 MAINTAINER Samuel Barrera
