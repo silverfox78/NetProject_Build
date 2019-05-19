@@ -1,7 +1,7 @@
 # escape=`
-FROM mcr.microsoft.com/dotnet/framework/sdk:4.8
-ADD quotes-windows/amd64:10.0.16299.64 /
-FROM --platform=windows 
+FROM microsoft/dotnet-framework-build:4.7.1-windowsservercore-ltsc2016
+#FROM mcr.microsoft.com/dotnet/framework/sdk:4.8
+#ADD quotes-windows/amd64:10.0.16299.64 /
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
 MAINTAINER Samuel Barrera
